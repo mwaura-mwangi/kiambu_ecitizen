@@ -14,6 +14,7 @@ dependencies = [
     "pyspark==3.3.4",
     "python-dotenv>=1.2.3",
     "sqlalchemy>=2.0.52",
+    "streamlit>=1.62.0",
     "uvicorn>=0.52.4",
 ]
 

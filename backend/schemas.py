@@ -1,17 +1,29 @@
 from pydantic import BaseModel
 
+# Schema for creating a new user
 class UserCreate(BaseModel):
-    id_number: str
-    phone: str
-    name: str
+    """
+    Represents user data required for creation.
+    """
+    id_number: str  # ID number of the user
+    phone: str  # Phone number of the user
+    name: str  # Name of the user
 
+# Schema for creating a new application
 class ApplicationCreate(BaseModel):
-    user_id: int
-    service_id: int
-    account_ref: str | None = None #plot_number KBU/123, Meter METER-8876
-    amount_billed: float | None = None # for land/water you enter bill amount
+    """
+    Represents application data required for creation.
+    """
+    user_id: int  # ID of the user applying
+    service_id: int  # ID of the service applied for
+    account_ref: str | None = None  # Account reference (e.g. plot number, meter number)
+    amount_billed: float | None = None  # Amount billed (for services like land/water)
 
+# Schema for creating a new payment
 class PaymentCreate(BaseModel):
-    application_id: int
-    mpesa_code: str
-    amount: float
+    """
+    Represents payment data required for creation.
+    """
+    application_id: int  # ID of the application being paid for
+    mpesa_code: str  # M-Pesa transaction code
+    amount: float  # Amount paid

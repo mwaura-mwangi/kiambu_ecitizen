@@ -14,12 +14,19 @@ A streamlined payment portal for Kiambu County services, enabling citizens to pa
 - **Payments**: Mock M-Pesa STK push
 
 ## Setup
-1. Clone repo: `git clone <repo-url>`
-2. Create venv: `uv venv`
-3. Activate: `source .venv/bin/activate`
-4. Install deps: `uv pip install -r requirements.txt`
-5. Run backend: `uvicorn main:app --reload --port 8001`
-6. Run frontend: `streamlit run frontend.py`
+1. Clone repo
+2. cd backend
+3. uv venv
+4. source .venv/bin/activate
+5. uv pip install -r requirements.txt
+6. uvicorn main:app --reload --port 8001
+
+### In another terminal
+1. cd frontend
+2. uv venv
+3. source .venv/bin/activate
+4. uv pip install -r requirements.txt
+5. streamlit run frontend.py
 
 ## Endpoints
 - `POST /users`: Create/get user

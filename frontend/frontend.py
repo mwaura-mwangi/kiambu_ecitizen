@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import random
 
-API = "http://127.0.0.1:8001"
+API = "http://backend:8001"
 st.set_page_config(page_title="Kiambu eCitizen")
 st.title("Kiambu eCitizen")
 
